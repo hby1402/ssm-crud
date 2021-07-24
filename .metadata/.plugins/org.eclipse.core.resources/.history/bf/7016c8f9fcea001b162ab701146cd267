@@ -1,0 +1,11 @@
+package com.hby.pojo;
+
+import java.util.Date;
+
+public class User {
+	private Integer id;
+	private String name;
+	private String address;
+	private Date birth_date;
+	private Date create_date;
+}

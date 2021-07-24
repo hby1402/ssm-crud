@@ -1,0 +1,26 @@
+package com.hby.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hby.pojo.User;
+import com.hby.service.UserService;
+
+@Controller
+public class UserController {
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping("/queryAllUsers")
+	public String queryAllUsers() {
+		
+	}
+	
+	@RequestMapping("/addUser")
+	public String addUser(User user) {
+		userService.addUser(user);
+		return "redirect:/queryAllUsers";
+	}
+	
+}

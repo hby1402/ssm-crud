@@ -1,0 +1,5 @@
+package com.hby.dao;
+
+public interface UserMapeer {
+	
+}

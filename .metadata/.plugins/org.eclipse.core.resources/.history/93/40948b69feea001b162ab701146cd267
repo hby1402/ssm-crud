@@ -1,0 +1,7 @@
+package com.hby.pojo;
+
+public interface UserMapper {
+	//增删改查用户
+	int addUser(User user);
+	
+}

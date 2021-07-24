@@ -1,0 +1,39 @@
+package com.hby.service;
+
+import java.util.List;
+
+import com.hby.pojo.User;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public int addUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteUser(Integer id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public User queryUserById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> queryAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

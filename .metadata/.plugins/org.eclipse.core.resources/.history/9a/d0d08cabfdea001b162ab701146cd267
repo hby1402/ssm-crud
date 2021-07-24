@@ -1,0 +1,5 @@
+package com.hby.pojo;
+
+public interface UserMapper {
+
+}

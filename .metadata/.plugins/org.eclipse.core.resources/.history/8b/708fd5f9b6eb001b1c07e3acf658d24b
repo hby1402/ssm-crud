@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hby.dao.UserMapper">
+	<!-- 查询用户 -->
+    <select id="queryUserById" parameterType="Integer" resultType="User">
+    	select * from user where id = #{id};
+    </select>
+    
+    <select id="queryUserByName" resultType="User">
+    	select * from user where name like '%#{name}%';
+    </select>
+    
+    <select id="queryAllUsers" resultType="User">
+    	select * from user;
+    </select>
+    
+	<!-- 增加用户 -->
+	<insert id="addUser" parameterType="User">
+		insert into user (name,address,birth_date,create_date) 
+		values (#{name},#{address},#{birth_date},#{create_date});
+	</insert>
+	
+	<!-- 删除用户 -->
+	<delete id="deleteUser" parameterType="Integer">
+		delete from user where id = #{id};
+	</delete>
+	
+	<!-- 修改用户 -->
+	<update id="updateUser" parameterType="User">
+		update user set 
+		name = #{name} , address = #{address},
+		birth_date = #{birth_date} , create_date = #{create_date}
+		where id = #{id};
+	</update>
+    
+</mapper>

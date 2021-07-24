@@ -1,0 +1,46 @@
+package com.hby.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hby.dao.UserMapper;
+import com.hby.pojo.User;
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	private UserMapper userMapper;
+
+	@Override
+	public int addUser(User user) {
+		
+		return userMapper.addUser(user);
+	}
+
+	@Override
+	public int deleteUser(Integer id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public User queryUserById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> queryAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

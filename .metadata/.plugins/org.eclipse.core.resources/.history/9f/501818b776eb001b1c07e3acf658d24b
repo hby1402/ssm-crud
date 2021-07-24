@@ -1,0 +1,5 @@
+package com.hby.service;
+
+public interface UserService {
+
+}
