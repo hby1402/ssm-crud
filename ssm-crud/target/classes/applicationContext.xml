@@ -14,7 +14,7 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan> 
 	<!-- 也可以只配置为扫描 controller 包 -->
-	<!-- <context:component-scan base-package="com.nhy.java.controller"/> -->
+	<!-- <context:component-scan base-package="com.hby.controller"/> -->
 	
 	<!-- spring 的配置：和业务逻辑有关的 -->
 	<!-- 数据源、事务控制、与 mybatis 整合 -->

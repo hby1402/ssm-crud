@@ -5,26 +5,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.hby.dao.UserMapper">
 	<!-- 查询用户 -->
     <select id="queryUserById" parameterType="Integer" resultType="User">
-    	select * from user where id = #{id};
+    	select * from user where id = #{id}
     </select>
     
     <select id="queryUserByName" parameterType="User" resultType="User">
-    	select * from user where name like CONCAT('%',#{name},'%');
+    	select * from user where name like CONCAT('%',#{name},'%')
     </select>
     
     <select id="queryAllUsers" resultType="User">
-    	select * from user;
+    	select * from user
     </select>
     
 	<!-- 增加用户 -->
 	<insert id="addUser" parameterType="User">
 		insert into user (name,address,birth_date,create_date) 
-		values (#{name},#{address},#{birth_date},#{create_date});
+		values (#{name},#{address},#{birth_date},#{create_date})
 	</insert>
 	
 	<!-- 删除用户 -->
 	<delete id="deleteUser" parameterType="Integer">
-		delete from user where id = #{id};
+		delete from user where id = #{id}
 	</delete>
 	
 	<!-- 修改用户 -->
@@ -32,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update user set 
 		name = #{name} , address = #{address},
 		birth_date = #{birth_date} , create_date = #{create_date}
-		where id = #{id};
+		where id = #{id}
 	</update>
     
 </mapper>
